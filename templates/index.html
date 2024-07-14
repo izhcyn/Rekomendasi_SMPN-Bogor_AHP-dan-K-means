@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Rekomendasi Sekolah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Rekomendasi Sekolah</h1>
+        <form action="{{ url_for('recommendation') }}" method="POST">
+            <label for="score">Skor Rapot:</label>
+            <input type="number" id="score" name="score" step="0.01" required>
+            <br><br>
+
+            <label for="kelurahan">Pilih atau Ketik Kelurahan:</label>
+            <input list="kelurahan-list" id="kelurahan" name="kelurahan" required>
+            <datalist id="kelurahan-list">
+                <option value="Balungbangjaya"></option>
+                <option value="Bubulak"></option>
+                <option value="Cilendek Barat"></option>
+                <option value="Cilendek Timur"></option>
+                <option value="Curug"></option>
+                <option value="Curugmekar"></option>
+                <option value="Gunungbatu"></option>
+                <option value="Loji"></option>
+                <option value="Margajaya"></option>
+                <option value="Menteng"></option>
+                <option value="Pasirjaya"></option>
+                <option value="Pasirkuda"></option>
+                <option value="Pasirmulya"></option>
+                <option value="Semplak"></option>
+                <option value="Sindangbarang"></option>
+                <option value="Situgede"></option>
+                <option value="Batutulis"></option>
+                <option value="Bojongkerta"></option>
+                <option value="Bondongan"></option>
+                <option value="Cikaret"></option>
+                <option value="Cipaku"></option>
+                <option value="Empang"></option>
+                <option value="Genteng"></option>
+                <option value="Harjasari"></option>
+                <option value="Kertamaya"></option>
+                <option value="Lawanggintung"></option>
+                <option value="Muarasari"></option>
+                <option value="Mulyaharja"></option>
+                <option value="Pakuan"></option>
+                <option value="Pamoyanan"></option>
+                <option value="Rancamaya"></option>
+                <option value="Ranggamekar"></option>
+                <option value="Babakan"></option>
+                <option value="Babakanpasar"></option>
+                <option value="Cibogor"></option>
+                <option value="Ciwaringin"></option>
+                <option value="Gudang"></option>
+                <option value="Kebonkelapa"></option>
+                <option value="Pabaton"></option>
+                <option value="Paledang"></option>
+                <option value="Panaragan"></option>
+                <option value="Sempur"></option>
+                <option value="Tegallega"></option>
+                <option value="Baranangsiang"></option>
+                <option value="Katulampa"></option>
+                <option value="Sindangrasa"></option>
+                <option value="Sindangsari"></option>
+                <option value="Sukasari"></option>
+                <option value="Tajur"></option>
+                <option value="Bantarjati"></option>
+                <option value="Cibuluh"></option>
+                <option value="Ciluar"></option>
+                <option value="Cimahpar"></option>
+                <option value="Ciparigi"></option>
+                <option value="Kedunghalang"></option>
+                <option value="Tanahbaru"></option>
+                <option value="Tegalgundil"></option>
+                <option value="Cibadak"></option>
+                <option value="Kayumanis"></option>
+                <option value="Kebonpedes"></option>
+                <option value="Kedungbadak"></option>
+                <option value="Kedungjaya"></option>
+                <option value="Kedungwaringin"></option>
+                <option value="Kencana"></option>
+                <option value="Mekarwangi"></option>
+                <option value="Sukadamai"></option>
+                <option value="Sukaresmi"></option>
+                <option value="Tanahsareal"></option>
+            </datalist>
+            <br><br>
+
+            <fieldset>
+                <legend>Pilih Kriteria Sekolah:</legend>
+                <input type="radio" id="Zona" name="criteria" value="Zona" required>
+                <label for="Zona">Zona</label><br>
+
+                <input type="radio" id="fasilitas" name="criteria" value="fasilitas">
+                <label for="fasilitas">Fasilitas Lengkap</label><br>
+            </fieldset>
+            <br>
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+</body>
+</html>

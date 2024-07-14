@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Sekolah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rekomendasi Sekolah Berdasarkan Kriteria: {{ criteria }}</h1>
+        <div class="table-container">
+            {{ table_html | safe }}
+        </div>
+        <br>
+        <h2>Hierarki AHP</h2>
+        <img src="{{ url_for('send_image', filename=hierarchy_path.split('/')[-1]) }}" alt="Hierarki AHP">
+        <br>
+        <a href="{{ url_for('index') }}">Kembali</a>
+    </div>
+</body>
+</html>
