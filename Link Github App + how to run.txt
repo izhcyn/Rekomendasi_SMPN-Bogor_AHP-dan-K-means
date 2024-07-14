@@ -1,0 +1,8 @@
+https://github.com/izhcyn/Rekomendasi_SMPN-Bogor_AHP-dan-K-means.git
+
+
+how to run :
+1. open in vscode
+2. go to terminal (ctrl+)
+3. type 'python app.py'
+4. open Browser and type 'Localhost:5000'
